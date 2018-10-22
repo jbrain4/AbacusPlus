@@ -3,6 +3,7 @@ var leftSide = 0
 var thirdValue = 0
 var operation = ""
 
+// Number buttons
 function zeroButton() {
   value += "0"
   document.getElementById("output").innerHTML = value
@@ -79,6 +80,8 @@ function nineButton() {
   }
   document.getElementById("output").innerHTML = value
 }
+
+// Other buttons
 function decimalButton() {
   value += "."
   document.getElementById("output").innerHTML = value
@@ -93,7 +96,7 @@ function percentButton() {
 }
 
 
-
+// Math function buttons
 function addButton() {
   if (operation != "" && value != "") {
     calculate()
@@ -127,7 +130,6 @@ function multiButton() {
   value = ""
   operation = "*"
 }
-
 function divButton() {
   if (operation != "" && value != "") {
     calculate()
@@ -140,6 +142,7 @@ function divButton() {
   operation = "/"
 }
 
+// Result button
 function calculate(){
   if (operation == "+") {
     leftSide = leftSide + parseFloat(value, 10)
@@ -166,6 +169,7 @@ function calculate(){
   operation = ""
 }
 
+// Clear Button
 function clearAll() {
   leftSide = 0
   value = ""
