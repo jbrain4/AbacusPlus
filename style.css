@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: 'Source Code Pro';
     src: url('fonts/SourceCodePro-Regular.ttf');
@@ -17,28 +18,30 @@ div.numbers {
   float: left;
   width: 300px;
 }
+
+/* Buttons */
 button {
-  background-color: #EDF2F4;
-  border: 2px solid #EDF2F4;
-  font-size: 24px;
-  font-family: 'Source Code Pro';
-  color: #2b2d42;
   min-width: 75px;
   height: 75px;
   margin: 0;
   display: inline;
   float: left;
+  font-family: 'Source Code Pro';
+  font-size: 24px;
+  color: #2b2d42;
+  background-color: #EDF2F4;
+  border: 2px solid #EDF2F4;
   transition: 0.25s;
   outline: none;
   user-select: none;
 }
 button:hover{
   background-color: #d5d9db;
-  border: 2px solid #d5d9db;
+  border-color: #d5d9db;
 }
 button:active {
   background-color: #bdc1c3;
-  border: 2px solid #bdc1c3;
+  border-color: #bdc1c3;
 }
 button#zero-button {
   width: 150px;
@@ -50,11 +53,11 @@ button.mathFunction {
 }
 button.mathFunction:hover {
   background-color: #3eb254;
-  border: 2px solid #3eb254;
+  border-color: #3eb254;
 }
 button.mathFunction:active {
   background-color: #379e4b;
-  border: 2px solid #379e4b;
+  border-color: #379e4b;
 }
 button.otherFunctions {
   color: #EDF2F4;
@@ -63,28 +66,28 @@ button.otherFunctions {
 }
 button.otherFunctions:hover {
   background-color: #cf4b5b;
-  border: 2px solid #cf4b5b;
+  border-color: #cf4b5b;
 }
 button.otherFunctions:active {
   background-color: #b84351;
-  border: 2px solid #b84351;
+  border-color: #b84351;
 }
 div.titleBar {
-  -webkit-app-region: drag;
+  height: 35px;
   padding: 0;
+  padding-top: 0;
   margin: 0;
   margin-top: 0;
-  padding-top: 0;
   background-color: #2b2d42;
-  height: 35px;
+  -webkit-app-region: drag;
 }
-h1 {
+h1#output {
+  padding: 10px;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Source Code Pro Medium';
   font-size: 48px;
   color: #EDF2F4;
-  font-family: 'Source Code Pro Medium';
-  padding: 10px;
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 0;
   background-color: #2b2d42;
 }
