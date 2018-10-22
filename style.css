@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('fonts/SourceCodePro-Regular.ttf');
+}
+@font-face {
+    font-family: 'Source Code Pro Medium';
+    src: url('fonts/SourceCodePro-Medium.ttf');
+}
+
+
+body {
+  font-family: 'Source Code Pro';
+  margin: 0;
+}
+div.numbers {
+  display: block;
+  float: left;
+  width: 300px;
+}
+button {
+  background-color: #EDF2F4;
+  border: 2px solid #EDF2F4;
+  font-size: 24px;
+  font-family: 'Source Code Pro';
+  color: #2b2d42;
+  min-width: 75px;
+  height: 75px;
+  margin: 0;
+  display: inline;
+  float: left;
+  transition: 0.25s;
+  outline: none;
+  user-select: none;
+}
+button:hover{
+  background-color: #d5d9db;
+  border: 2px solid #d5d9db;
+}
+button:active {
+  background-color: #bdc1c3;
+  border: 2px solid #bdc1c3;
+}
+button#zero-button {
+  width: 150px;
+}
+button.mathFunction {
+  color: #EDF2F4;
+  background-color: #45c65e;
+  border: 2px solid #45c65e;
+}
+button.mathFunction:hover {
+  background-color: #3eb254;
+  border: 2px solid #3eb254;
+}
+button.mathFunction:active {
+  background-color: #379e4b;
+  border: 2px solid #379e4b;
+}
+button.otherFunctions {
+  color: #EDF2F4;
+  background-color: #e75466;
+  border: 2px solid #e75466;
+}
+button.otherFunctions:hover {
+  background-color: #cf4b5b;
+  border: 2px solid #cf4b5b;
+}
+button.otherFunctions:active {
+  background-color: #b84351;
+  border: 2px solid #b84351;
+}
+div.titleBar {
+  -webkit-app-region: drag;
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #2b2d42;
+  height: 35px;
+}
+h1 {
+  font-size: 48px;
+  color: #EDF2F4;
+  font-family: 'Source Code Pro Medium';
+  padding: 10px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  background-color: #2b2d42;
+}
