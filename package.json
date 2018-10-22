@@ -5,8 +5,10 @@
   "description": "A simple calculator built with Electron.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . abacus-plus --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=jbrain4 --version-string.FileDescription=jbrain4 --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . abacus-plus --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "keywords": [
     "calculator",
@@ -19,6 +21,17 @@
   "author": "jbrain4",
   "devDependencies": {
     "electron": "^3.0.5",
-    "electron-packager": "^8.1.0"
-  }
+    "electron-packager": "^8.7.2"
+  },
+  "dependencies": {
+    "electron": "^3.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbrain4/AbacusPlus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jbrain4/AbacusPlus/issues"
+  },
+  "homepage": "https://github.com/jbrain4/AbacusPlus#readme"
 }
