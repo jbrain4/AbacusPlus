@@ -19,3 +19,6 @@ To build Abacus Plus, you will need to
 1. Install `electron-packager` with `npm install -g electron-packager` first.
 2. Run `npm run package-win` or `npm run package-mac` or `npm run package-linux` based on the platform you are compiling for.
 3. The compiled executable is located in the `release-builds` directory
+
+## Run Before You Build
+If you just want to run it before you build it you just need to run `npm start`
