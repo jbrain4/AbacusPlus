@@ -2,6 +2,7 @@ var value = ""
 var leftSide = 0
 var thirdValue = 0
 var operation = ""
+var doesDecimalExist = false
 
 // Number buttons
 function zeroButton() {
@@ -83,8 +84,11 @@ function nineButton() {
 
 // Other buttons
 function decimalButton() {
-  value += "."
-  document.getElementById("output").innerHTML = value
+  if (!doesDecimalExist) {
+    value += "."
+    document.getElementById("output").innerHTML = value
+    doesDecimalExist = true
+  }
 }
 function negativeButton() {
   value = (-1 * parseFloat(value, 10))
@@ -93,6 +97,21 @@ function negativeButton() {
 function percentButton() {
   value = (0.01 * parseFloat(value, 10))
   document.getElementById("output").innerHTML = value
+}
+function deleteButton() {
+  if (value.length > 1) {
+    value = value.slice(0, -1)
+    document.getElementById("output").innerHTML = value
+  } else if (value.length == 1) {
+    value = "0"
+    document.getElementById("output").innerHTML = value
+  }
+
+  if (value.indexOf('.') > -1) {
+    doesDecimalExist = true
+  } else {
+    doesDecimalExist = false
+  }
 }
 
 
@@ -107,6 +126,7 @@ function addButton() {
   }
   value = ""
   operation = "+"
+  doesDecimalExist = false
 }
 function subButton() {
   if (operation != "" && value != "") {
@@ -118,6 +138,7 @@ function subButton() {
   }
   value = ""
   operation = "-"
+  doesDecimalExist = false
 }
 function multiButton() {
   if (operation != "" && value != "") {
@@ -129,6 +150,7 @@ function multiButton() {
   }
   value = ""
   operation = "*"
+  doesDecimalExist = false
 }
 function divButton() {
   if (operation != "" && value != "") {
@@ -140,6 +162,7 @@ function divButton() {
   }
   value = ""
   operation = "/"
+  doesDecimalExist = false
 }
 
 // Result button
@@ -167,6 +190,7 @@ function calculate(){
   document.getElementById("output").innerHTML = leftSide
   value = ""
   operation = ""
+  doesDecimalExist = false
 }
 
 // Clear Button
@@ -175,5 +199,53 @@ function clearAll() {
   value = ""
   operation = ""
   document.getElementById("output").innerHTML = leftSide
-
+  doesDecimalExist = false
 }
+
+
+// Event listener
+document.addEventListener("keydown", (event) => {
+  event.stopImmediatePropagation();
+  const keyName = event.key
+  console.log('Key Pressed: ' + keyName)
+
+  if (keyName == "1") {
+    oneButton()
+  } else if (keyName == "2") {
+    twoButton()
+  } else if (keyName == "3") {
+    threeButton()
+  } else if (keyName == "4") {
+    fourButton()
+  } else if (keyName == "5") {
+    fiveButton()
+  } else if (keyName == "6") {
+    sixButton()
+  } else if (keyName == "7") {
+    sevenButton()
+  } else if (keyName == "8") {
+    eightButton()
+  } else if (keyName == "9") {
+    nineButton()
+  } else if (keyName == "0") {
+    zeroButton()
+  } else if (keyName == "*" || keyName == "x") {
+    multiButton()
+  } else if (keyName == "/") {
+    divButton()
+  } else if (keyName == "+") {
+    addButton()
+  } else if (keyName == "-") {
+    subButton()
+  } else if (keyName == "%") {
+    percentButton()
+  } else if (keyName == ".") {
+    decimalButton()
+  } else if (keyName == "c") {
+    clearAll()
+  } else if (keyName == "=" || keyName == "Enter") {
+    calculate()
+  } else if (keyName == "Backspace") {
+    deleteButton()
+  }
+});
