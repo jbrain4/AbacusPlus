@@ -1,8 +1,7 @@
 # Abacus Plus
 
-![Abacus Plus app icon](https://jbrain4.github.io/resources/abacus-plus/app-icon.png)
-
-![Abacus Plus screenshot](https://jbrain4.github.io/resources/abacus-plus/screenshot.png)
+![Abacus Plus Mac screenshot](resources/MacScreenshot.png)
+![Abacus Plus Win screenshot](resources/WinScreenshot.png)
 
 ## Download now
 [View Releases](https://github.com/jbrain4/AbacusPlus/releases)
