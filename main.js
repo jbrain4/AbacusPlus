@@ -5,7 +5,12 @@ let win
 
 function createWindow () {
   // Create the window
-  win = new BrowserWindow({ width: 300, height: 480, titleBarStyle: 'hiddenInset', resizable: false, fullscreen: false, icon: path.join(__dirname, "icons/png/64x64.png") })
+  if (process.platform == 'win32') {
+    win = new BrowserWindow({ width: 306, height: 484, titleBarStyle: 'hiddenInset', resizable: false, fullscreen: false, icon: path.join(__dirname, "icons/png/64x64.png") })
+    win.setMenu(null);
+  } else {
+    win = new BrowserWindow({ width: 300, height: 480, titleBarStyle: 'hiddenInset', resizable: false, fullscreen: false, icon: path.join(__dirname, "icons/png/64x64.png") })
+  }
 
   win.loadFile('index.html')
 
