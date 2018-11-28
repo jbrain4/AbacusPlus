@@ -1,3 +1,10 @@
+// Windows Config
+if (process.platform == 'win32') {
+    document.getElementById("titleBar").style.display = 'none';
+    document.getElementById("output").style.paddingTop = "10px";
+}
+
+
 var value = ""
 var leftSide = 0
 var thirdValue = 0
