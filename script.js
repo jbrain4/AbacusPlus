@@ -1,7 +1,7 @@
 // Windows Config
-if (process.platform == 'win32') {
-    document.getElementById("titleBar").style.display = 'none';
-    document.getElementById("output").style.paddingTop = "10px";
+if (process.platform == 'darwin') {
+    document.getElementById("titleBar").style.display = 'block';
+    document.getElementById("output").style.paddingTop = "0px";
 }
 
 
