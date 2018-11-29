@@ -80,10 +80,10 @@ div.titleBar {
   margin-top: 0;
   background-color: #2b2d42;
   -webkit-app-region: drag;
+  display: none;
 }
 h1#output {
   padding: 10px;
-  padding-top: 0;
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Source Code Pro Medium';
