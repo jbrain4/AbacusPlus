@@ -7,13 +7,16 @@ if (process.platform == 'darwin') {
 
 var value = ""
 var leftSide = 0
-var thirdValue = 0
 var operation = ""
 var doesDecimalExist = false
 
 // Number buttons
 function zeroButton() {
-  value += "0"
+  if (value == "0") {
+    value = "0"
+  } else {
+    value += "0"
+  }
   document.getElementById("output").innerHTML = value
 }
 function oneButton() {
@@ -176,23 +179,18 @@ function divButton() {
 function calculate(){
   if (operation == "+") {
     leftSide = leftSide + parseFloat(value, 10)
-    thirdValue = 0
   }
   else if (operation == "-") {
     leftSide = leftSide - parseFloat(value, 10)
-    thirdValue = 0
   }
   else if (operation == "*") {
     leftSide = leftSide * parseFloat(value, 10)
-    thirdValue = 0
   }
   else if (operation == "/") {
     leftSide = leftSide / parseFloat(value, 10)
-    thirdValue = 0
   }
   else {
     leftSide = 0
-    thirdValue = 0
   }
   document.getElementById("output").innerHTML = leftSide
   value = ""
@@ -214,7 +212,9 @@ function clearAll() {
 document.addEventListener("keydown", (event) => {
   event.stopImmediatePropagation();
   const keyName = event.key
-  console.log('Key Pressed: ' + keyName)
+  //DEBUG: console.log('Key Pressed: ' + keyName)
+  //DEBUG:const dir = __dirname
+  //DEBUG:console.log(dir)
 
   if (keyName == "1") {
     oneButton()

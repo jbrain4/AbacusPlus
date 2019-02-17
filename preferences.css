@@ -1,0 +1,29 @@
+:root {
+
+  /* Change the look of AbacusPlus
+   * The color values can be any CSS color
+   * Restart the application to see it's effect
+   */
+
+  /* CSS Colors for number buttons (0-9 and .) */
+  --number-button-color: #EDF2F4; /* Default: #EDF2F4 */
+  --number-button-text-color: #2B2D42; /* Default: #2B2D42 */
+  --number-button-hover-color: #D5D9DB; /* Default: #D5D9DB */
+  --number-button-active-color: #BDC1C3; /* Default: #BDC1C3 */
+
+  /* Math function colors (+, -, ÷, x)*/
+  --math-button-color: #45C65E; /* Default: #45C65E */
+  --math-button-text-color: #EDF2F4; /* Default: #EDF2F4 */
+  --math-button-hover-color: #3EB254; /* Default: #3EB254 */
+  --math-button-active-color: #379E4B; /* Default: #379E4B */
+
+  /* Other function colors (CLR, %, -/+)*/
+  --other-button-color: #E75466; /* Default: #E75466 */
+  --other-button-text-color: #EDF2F4; /* Default: #EDF2F4 */
+  --other-button-hover-color: #CF4B5B; /* Default: #CF4B5B */
+  --other-button-active-color: #B84351; /* Default: #B84351 */
+
+  /* Title bar/result color */
+  --result-text-color: #EDF2F4; /* Default: #EDF2F4 */
+  --result-color: #2B2D42; /* Default: #2B2D42 */
+}

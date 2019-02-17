@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=resources/icons/mac/icon.icns --prune=true --out=release-builds",
-    "package-win": "electron-packager . abacus-plus --overwrite --asar=true --platform=win32 --arch=ia32 --icon=resources/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=jbrain4 --version-string.FileDescription=jbrain4 --version-string.ProductName=\"AbacusPlus\"",
+    "package-win": "electron-packager . abacus-plus --overwrite --asar=true --platform=win32 --arch=ia32 --icon=resources/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=that-human-jason --version-string.FileDescription=that-human-jason --version-string.ProductName=\"AbacusPlus\"",
     "package-linux": "electron-packager . abacus-plus --overwrite --asar=true --platform=linux --arch=x64 --icon=resources/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "keywords": [
@@ -18,22 +18,23 @@
     "css",
     "npm"
   ],
-  "author": "jbrain4",
+  "author": "that-human-jason",
   "devDependencies": {
-    "electron": "^3.0.5",
+    "electron": "^3.1.0",
     "electron-packager": "^8.7.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbrain4/AbacusPlus.git"
+    "url": "git+https://github.com/that-human-jason/AbacusPlus.git"
   },
   "bugs": {
-    "url": "https://github.com/jbrain4/AbacusPlus/issues"
+    "url": "https://github.com/that-human-jason/AbacusPlus/issues"
   },
-  "homepage": "https://github.com/jbrain4/AbacusPlus#readme",
+  "homepage": "https://github.com/that-human-jason/AbacusPlus#readme",
   "dependencies": {
+    "electron": "^3.0.5",
     "electron-packager": "^8.7.2",
-    "electron": "^3.0.5"
+    "electron-settings": "^3.2.0"
   },
   "license": "ISC"
 }

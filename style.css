@@ -1,3 +1,4 @@
+@import "preferences.css";
 /* Fonts */
 @font-face {
     font-family: 'Source Code Pro';
@@ -28,49 +29,49 @@ button {
   float: left;
   font-family: 'Source Code Pro';
   font-size: 24px;
-  color: #2b2d42;
-  background-color: #EDF2F4;
-  border: 2px solid #EDF2F4;
+  color: var(--number-button-text-color);
+  background-color: var(--number-button-color);
+  border: 2px solid var(--number-button-color);
   transition: 0.25s;
   outline: none;
   user-select: none;
 }
 button:hover{
-  background-color: #d5d9db;
-  border-color: #d5d9db;
+  background-color: var(--number-button-hover-color);
+  border-color: var(--number-button-hover-color);
 }
 button:active {
-  background-color: #bdc1c3;
-  border-color: #bdc1c3;
+  background-color: var(--number-button-active-color);
+  border-color: var(--number-button-active-color);
 }
 button#zero-button {
   width: 150px;
 }
 button.mathFunction {
-  color: #EDF2F4;
-  background-color: #45c65e;
-  border: 2px solid #45c65e;
+  color: var(--math-button-text-color);
+  background-color: var(--math-button-color);
+  border: 2px solid var(--math-button-color);
 }
 button.mathFunction:hover {
-  background-color: #3eb254;
-  border-color: #3eb254;
+  background-color: var(--math-button-hover-color);
+  border-color: var(--math-button-hover-color);
 }
 button.mathFunction:active {
-  background-color: #379e4b;
-  border-color: #379e4b;
+  background-color: var(--math-button-active-color);
+  border-color: var(--math-button-active-color);
 }
 button.otherFunctions {
-  color: #EDF2F4;
-  background-color: #e75466;
-  border: 2px solid #e75466;
+  color: var(--other-button-text-color);
+  background-color: var(--other-button-color);
+  border: 2px solid var(--other-button-color);
 }
 button.otherFunctions:hover {
-  background-color: #cf4b5b;
-  border-color: #cf4b5b;
+  background-color: var(--other-button-hover-color);
+  border-color: var(--other-button-hover-color);
 }
 button.otherFunctions:active {
-  background-color: #b84351;
-  border-color: #b84351;
+  background-color: var(--other-button-active-color);
+  border-color: var(--other-button-active-color);
 }
 div.titleBar {
   height: 35px;
@@ -78,7 +79,7 @@ div.titleBar {
   padding-top: 0;
   margin: 0;
   margin-top: 0;
-  background-color: #2b2d42;
+  background-color: var(--result-color);
   -webkit-app-region: drag;
   display: none;
 }
@@ -88,6 +89,6 @@ h1#output {
   margin-bottom: 0;
   font-family: 'Source Code Pro Medium';
   font-size: 48px;
-  color: #EDF2F4;
-  background-color: #2b2d42;
+  color: var(--result-text-color);
+  background-color: var(--result-color);
 }
